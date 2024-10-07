@@ -1,0 +1,5 @@
+FROM openjdk:21-jdk
+WORKDIR /clients
+COPY clients/target/clients-1.0-SNAPSHOT.jar clients.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "clients.jar"]

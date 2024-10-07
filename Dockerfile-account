@@ -1,0 +1,5 @@
+FROM openjdk:21-jdk
+WORKDIR /accounts
+COPY accounts/target/accounts-1.0-SNAPSHOT.jar accounts.jar
+EXPOSE 8081
+ENTRYPOINT ["java", "-jar", "accounts.jar"]
